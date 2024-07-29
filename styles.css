@@ -1,0 +1,127 @@
+/* 样式表：styles.css */
+
+/* 重置默认样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #007bff;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+/* 其他可能需要的样式 */
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* 响应式样式（可选） */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+/* 假设你已经在styles.css文件中 */
+
+/* 登录容器的样式 */
+#login-container {
+    width: 300px; /* 设置登录容器的宽度 */
+    padding: 20px; /* 添加内边距 */
+    border: 1px solid #ccc; /* 添加边框 */
+    border-radius: 5px; /* 添加圆角 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    margin-top: 20px; /* 添加上边距 */
+}
+
+/* 表单标签和输入框的样式 */
+#loginForm label {
+    display: block; /* 使标签独占一行 */
+    margin-bottom: 10px; /* 添加底部外边距 */
+}
+
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
+    width: 100%; /* 设置输入框宽度为100% */
+    padding: 10px; /* 添加内边距 */
+    border: 1px solid #ccc; /* 添加边框 */
+    border-radius: 3px; /* 添加圆角 */
+    box-sizing: border-box; /* 确保padding和border包含在width内 */
+}
+
+/* 提交按钮的样式 */
+#loginForm input[type="submit"] {
+    width: 100%; /* 设置提交按钮宽度为100% */
+    padding: 10px; /* 添加内边距 */
+    border: none; /* 移除边框 */
+    background-color: #4CAF50; /* 设置背景色 */
+    color: white; /* 设置文字颜色 */
+    cursor: pointer; /* 添加鼠标悬停时的效果 */
+    border-radius: 3px; /* 添加圆角 */
+}
+
+/* 提交按钮点击时的样式（可选） */
+#loginForm input[type="submit"]:hover {
+    background-color: #45a049; /* 修改点击时的背景色 */
+}

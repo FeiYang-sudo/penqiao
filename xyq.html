@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彭桥二初中校园墙</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 在这里添加你的样式代码 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .wall-post {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+        .wall-post:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>彭桥二初中校园墙</h1>
+    <nav>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#courses">课程</a></li>
+                <li><a href=xyq.html>校园墙</a></li>
+                <li><a href=lxxx.html>联系我们</a></li>
+                <li><a href=zbxx.html>招标信息</a></li>
+                <li><a href=dwrg.html>第五人格频道</a></li>
+            </ul>
+    </nav>
+
+    <!-- 校园墙帖子开始 -->
+
+    <div class="wall-post">
+        <h2>标题：欢迎新同学！</h2>
+        <p>内容：新的学期开始了，欢迎各位新同学加入我们的大家庭！...</p>
+        <p>发布人：管理员</p>
+        <p>发布时间：2023-10-23</p>
+    </div>
+     <!-- 提交表单 -->
+     <form id="postForm">
+        <label for="title">标题:</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="content">内容:</label>
+        <textarea id="content" name="content" required></textarea>
+
+        <input type="submit" value="发布">
+    </form>
+
+    <!-- 提交表单的JavaScript处理 -->
+    <script>
+        document.getElementById('postForm').addEventListener('submit', function(event) {
+            // 阻止表单的默认提交行为
+            event.preventDefault();
+
+            // 获取表单数据
+            var title = document.getElementById('title').value;
+            var content = document.getElementById('content').value;
+
+            // 创建一个新的帖子元素
+            var newPost = document.createElement('div');
+            newPost.className = 'wall-post';
+
+            // 创建帖子内容
+            var titleElement = document.createElement('h2');
+            titleElement.textContent = '标题：' + title;
+            newPost.appendChild(titleElement);
+
+            var contentElement = document.createElement('p');
+            contentElement.textContent = '内容：' + content;
+            newPost.appendChild(contentElement);
+
+            // 假设当前用户是"游客"，你可以根据实际情况获取或设置用户名
+            var authorElement = document.createElement('p');
+            authorElement.textContent = '发布人：游客';
+            newPost.appendChild(authorElement);
+
+            // 假设当前时间是发布时间
+            var date = new Date().toISOString().slice(0, 10).replace('T', ' ');
+            var dateElement = document.createElement('p');
+            dateElement.textContent = '发布时间：' + date;
+            newPost.appendChild(dateElement);
+
+            // 将新帖子添加到页面中的帖子列表的末尾
+            var postsContainer = document.body; // 假设帖子列表是整个body，或者你可以指定一个特定的容器
+            postsContainer.insertBefore(newPost, postsContainer.firstChild); // 插入到最前面
+
+            // 重置表单
+            document.getElementById('postForm').reset();
+        });
+    </script>
+</body>
+</html>
+
+    <!-- 可以继续添加更多的帖子 -->
+
+    <!-- 校园墙帖子结束 -->
+</body>
+</html>

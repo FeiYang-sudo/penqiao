@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彭桥二初中</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/logo.png">
+</head>
+<body>
+    <header>
+        <h1>欢迎来到学校网站</h1>
+        <nav>
+            <ul>
+               <li><a href="#home">首页</a></li>
+               <li><a href="#about">关于我们</a></li>
+               <li><a href="#courses">课程</a></li>
+               <li><a href=xyq.html>校园墙</a></li>
+               <li><a href=lxxx.html>联系我们</a></li>
+               <li><a href=zbxx.html>招标信息</a></li>
+               <li><a href=dwrg.html>第五人格频道</a></li>
+             </ul>
+           </nav>
+    </header>
+<!-- 在<nav>元素下方添加登录表单 -->
+<div id="login-container">
+    <form id="loginForm">
+        <label for="username">用户名:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">密码:</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="submit" value="登录">
+    </form>
+</div>
+
+    <main>
+        <section id="home">
+            <h2>首页</h2>
+            <p>欢迎来到我们学校的网站！这里是你获取学校信息的最佳地点。</p>
+        </section>
+
+        <section id="about">
+            <h2>关于我们</h2>
+            <img src="images/logo.png" alt="logo"style="width: 300px; height: auto;">
+            <p>这里是关于我们学校的介绍
+                <br>彭桥镇第二初级中学是位于河南省邓州市彭桥镇镇政府西南的一所初级中学。南邻镇医院，西邻乡果木实验基地。学校环境优美，师资力量雄厚。常住在校生大约1700人。学校拥有两座教学楼，一座实验室，四座寝室楼。学校学生食堂卫生条件良好，而且价格实惠。
+            </p>
+        </section>
+
+        <section id="courses">
+            <h2>课程</h2>
+            <p>这里列出了我们提供的课程
+                <br>学校开设的有语文、数学、英语、体育、政治、历史、生物、地理、物理、化学、音乐、美术等多门课程。学校学习氛围浓厚，老师尽职尽责，学生勤奋努力。在多次中招考试中取得优异成绩，培育出了一大批优秀毕业生，受到社会的一致好评。
+            </p>
+            <!-- 可以使用表格或列表来详细列出课程 -->
+        </section>
+
+        <section id="news">
+            <h2>新闻</h2>
+            <p>这里是我们学校的最新新闻...</p>
+            <!-- 可以使用文章列表或新闻轮播图来展示新闻 -->
+        </section>
+    </main>
+
+    <footer>
+        <p>版权所有 &copy; 2024 飞扬</p>
+    </footer>
+
+    <!-- 这里可以链接到JavaScript脚本 -->
+    <!-- <script src="scripts.js"></script> -->
+
+ <!-- 在</body>之前添加JavaScript -->
+ <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        // 阻止表单的默认提交行为
+        event.preventDefault();
+
+        // 获取表单数据
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        // 这里只是模拟验证，实际中你需要将用户名和密码发送到服务器进行验证
+        if (username === 'admin' && password === '123456') {
+            // 登录成功，你可以在这里执行一些操作，比如重定向到某个页面或显示一条消息
+            alert('登录成功！');
+
+            // 隐藏登录表单（可选）
+            document.getElementById('login-container').style.display = 'none';
+
+            // 可能还要添加一些逻辑，比如显示用户的个人资料或导航项等
+        } else {
+            // 登录失败，显示错误消息
+            alert('用户名或密码错误！');
+        }
+    });
+</script>   
+    </body>
+</html>
